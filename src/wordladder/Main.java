@@ -39,6 +39,7 @@ public class Main {
             do {
                 System.out.print("\nEnter the starting word: ");
                 startWord = scanner.nextLine();
+                startWord = startWord.toLowerCase();
                 if (listOfWords.contains(startWord)) {
                     validWord = true;
                 } else {
@@ -50,6 +51,7 @@ public class Main {
             do {
                 System.out.print("Enter the end word: ");
                 endWord = scanner.nextLine();
+                endWord = endWord.toLowerCase();
                 if (!listOfWords.contains(endWord)) {
                     System.out.println("\nPlease enter a valid english word!");
                 } else if (endWord.length() != startWord.length()) {
