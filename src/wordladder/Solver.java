@@ -112,8 +112,8 @@ class Solver {
         int numVisited = 0;
         if (found) {
             result = (currentNode.reconstructPath()).stream().map(Node::getWord).collect(Collectors.toList());
-            numVisited = closedList.size();
         }
+        numVisited = closedList.size();
         return new ReturnValues(result, numVisited);
     }
 
