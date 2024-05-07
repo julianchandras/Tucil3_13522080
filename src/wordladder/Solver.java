@@ -96,6 +96,10 @@ class Solver {
                    if a node with the same position as successor is in the CLOSED list which has a lower f than successor, skip this successor
                    otherwise, add  the node to the open list
                    ref: https://www.geeksforgeeks.org/a-search-algorithm/ */
+
+                if (evaluationFunction instanceof GreedyBFSEvaluationFunction) {
+                    openList.getBuffer().clear();
+                }
                 for (Node childNode: childNodes) {
                     if (!isWordInOpenListWithLowerEvalFunc(openList, childNode) && !isWordInClosedListWithLowerEvalFunc(closedList, childNode)) {
                         openList.enqueue(childNode);
